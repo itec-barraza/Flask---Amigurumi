@@ -1,0 +1,40 @@
+body{
+  background-color: blanchedalmond;
+}
+  .menu .item{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 32px;
+  }
+
+  .menu .header{
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+  }
+  
+  .slides {
+    background: blanchedalmond;
+  }
+  .slides .angle {
+    color: lightblue;
+    cursor: pointer;
+  }
+  .slides .angle:hover {
+    transform: scale(1.7);
+  }
+  .slides .angle.right {
+    float: right;
+    margin-right: 1rem;
+  }
+  .slides .angle.left {
+    float: left;
+    margin-left: 1rem;
+  }
+  .slides .slide {
+    transition: all 0.2s ease-in-out;
+  }
+  .slides .slide:not(.active) {
+    display: none;
+  }
+  .headerstyle .header {
+    font-style: oblique;
+  }

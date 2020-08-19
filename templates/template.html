@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Amigurumi Flask </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">    
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Banner -->
+    <div class="ui borderless yellow inverted menu">
+        <img class="ui image"   src="{{ url_for('static', filename='images/banner.png') }}">
+        <div class="ui header item">
+            <a class='header' href="{{ url_for('home') }}"> Amigurumis</p>
+        </div>
+    </div>
+    <!-- Menú -->
+    <div class="ui olive inverted three item massive menu">
+        <a class="item" href="{{ url_for('adultos') }}">Adultos</a>
+        <a class="item" href="{{ url_for('niños') }}">Niños</a>
+        <a class="item" href="{{ url_for('babyshower') }}">Baby Showers</a>
+    </div>
+    <!-- Content -->
+    {% block contenido %}
+    {% endblock %}        
+    <!-- Footer -->
+    <div class="ui inverted horizontal footer segment">
+        <div class="ui right aligned grid">
+            <div class="two column row">
+                <div class="left aligned column">
+                    <div class="ui inverted center aligned  segment">
+                        Dirección calle 53223
+                        <br> 
+                        Teléfono  155022332 
+                        <br> 
+                        <a href="mailto:correolocal@mail.com?Subject=Consulta%20Web">correolocal@mail.com</a> 
+                    </div>
+                </div>
+                <div class=" column">
+                    <div class="ui inverted segment">
+                        <button class="ui circular facebook icon button" onclick="location.href='https://www.facebook.com'" type="button">
+                            <i class="facebook icon"></i>
+                        </button>                
+                        <button class="ui circular twitter icon button" onclick="location.href='https://www.twitter.com'" type="button">
+                            <i class="twitter icon"></i>
+                        </button>
+                        <button class="ui circular instagram icon button" onclick="location.href='https://www.instagram.com'" type="button">
+                            <i class="instagram icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> No lo cierro para que ocupe todo el pie en vez de ver parte del body debajo-->
+    <script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+</body>
+</html>
